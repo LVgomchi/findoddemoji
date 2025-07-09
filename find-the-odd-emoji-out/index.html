@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find The Odd Emoji Out</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="start-screen" class="screen active">
+        <h1>Find The Odd Emoji Out</h1>
+        <button id="start-button">START</button>
+        <button id="leaderboard-button">Leaderboard</button>
+        <div class="adsense-slot-bottom"></div>
+    </div>
+
+    <div id="game-screen" class="screen">
+        <div id="game-header">
+            <span>Time: <span id="timer">60</span>s</span>
+            <span>Score: <span id="score">0</span></span>
+        </div>
+        <div id="emoji-grid"></div>
+    </div>
+
+    <div id="game-over-screen" class="screen">
+        <h1>GAME OVER</h1>
+        <h2>FINAL SCORE: <span id="final-score">0</span></h2>
+        <h3>PERSONAL BEST: <span id="personal-best">0</span></h3>
+        <div id="submit-score-container">
+            <input type="text" id="player-name" maxlength="3" placeholder="AAA">
+            <button id="submit-score-button">SUBMIT SCORE</button>
+        </div>
+        <button id="play-again-button">PLAY AGAIN</button>
+        <button id="share-button">SHARE</button>
+        <div class="adsense-slot-gameover"></div>
+    </div>
+
+    <div id="leaderboard-screen" class="screen">
+        <h1>Global Leaderboard</h1>
+        <table id="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be inserted by JS -->
+            </tbody>
+        </table>
+        <button id="back-to-start-button">Back</button>
+        <div class="adsense-slot-bottom"></div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
